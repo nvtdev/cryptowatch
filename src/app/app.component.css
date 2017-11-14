@@ -1,0 +1,15 @@
+.coins-table tbody {
+  height: 100%;
+  overflow-y: auto;
+  position: absolute;
+}
+
+.coins-table tbody {
+  height: 590px;
+}
+
+iframe {
+  height: 595px;
+  width: 920px;
+  position: absolute;
+}
