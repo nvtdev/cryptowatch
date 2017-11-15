@@ -15,17 +15,30 @@ export class AppComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    // this.getCoins(null);
-    this.getReddit(null);
+    this.getCoins(null);
+    // this.getReddit(null);
   }
 
   getCoins(params): void {
     this.http
-      .get("https://api.coinmarketcap.com/v1/ticker/?limit=50")
+      .get("https://api.coinmarketcap.com/v1/ticker/?limit=1000")
       .subscribe(data => {
         this.coins = data;
         console.log(this.coins);
+        console.log(this.coins.sort(this.sortCoins));
       });
+  }
+
+  sortCoins(coin1, coin2) {
+    if (parseFloat(coin1.percent_change_1h) < parseFloat(coin2.percent_change_1h))
+      return 1;
+    if (parseFloat(coin1.percent_change_1h) > parseFloat(coin2.percent_change_1h))
+      return -1;
+    return 0;
+  }
+
+  sortTable() {
+    console.log("test");
   }
 
   getReddit(params): void {
