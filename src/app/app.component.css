@@ -4,15 +4,35 @@
   display: block;
 }
 
-.coins-table  {
-  position: absolute;
-  margin-left: 30px;
+.coins-table {
+  /* position: absolute; */
+  margin-left: 10px;
+  width: 98%;
 }
 
-.coins-table th, td { width: 300px; }
+.coins-table th,
+td {
+  width: 300px;
+}
 
-.coins-table tr { display: block; }
+.coins-table tr {
+  display: block;
+}
 
 .navbar {
   margin-bottom: 0px;
+}
+
+#news-section {
+  height: 500px;
+  overflow: overlay;
+}
+
+#news-section,
+#info-section {
+  padding-left: 0px;
+}
+
+.info-link {
+  display: block;
 }
