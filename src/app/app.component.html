@@ -95,9 +95,12 @@
         <th>Name</th>
         <th>Symbol</th>
         <th>Price(USD)</th>
+        <th>Total Supply</th>
+        <th>Max Supply</th>
         <th (click)="sortTable('percent_change_1h')">1h Change</th>
         <th>24h Change</th>
         <th>7d Change</th>
+        <th>Follow</th>
       </tr>
     </thead>
     <tbody>
@@ -106,9 +109,14 @@
         <td>{{coin.name}}</td>
         <td>{{coin.symbol}}</td>
         <td>{{coin.price_usd}}</td>
+        <td>{{formatNumber(coin.total_supply)}}</td>
+        <td>{{formatNumber(coin.max_supply)}}</td>
         <td>{{coin.percent_change_1h}}</td>
         <td>{{coin.percent_change_24h}}</td>
         <td>{{coin.percent_change_7d}}</td>
+        <td>
+          <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+        </td>
       </tr>
     </tbody>
   </table>

@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
   coins: Object;
   originalCoins: Object;
   sortKey: "";
-  news: Object;
+  news: [Object];
   currentCoin: Object;
 
   constructor(private http: HttpClient) {}
@@ -109,5 +109,10 @@ export class AppComponent implements OnInit {
     }
 
     this.coins = updatedCoins;
+  }
+
+  formatNumber(x) {
+    let value = parseFloat(x) % 1 != 0 ? parseFloat(x) : parseInt(x);
+    return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
 }

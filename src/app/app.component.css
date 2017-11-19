@@ -1,22 +1,20 @@
-.coins-table tbody {
-  height: 250px;
-  overflow: auto;
-  display: block;
-}
-
 .coins-table {
   /* position: absolute; */
   margin-left: 10px;
   width: 98%;
+  height: 250px;
+  overflow: auto;
+  display: inherit;
 }
 
 .coins-table th,
 td {
-  width: 300px;
+  /* width: 300px; */
+  /* float: left; */
 }
 
 .coins-table tr {
-  display: block;
+  /* display: block; */
 }
 
 .navbar {
